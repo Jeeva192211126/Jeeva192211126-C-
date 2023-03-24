@@ -4,7 +4,7 @@
  int validates(string username) 
  { 
      int special = 0, l = username.length(); 
-     //check length is 0 or more than 30 
+    
      if (l == 0 || l > 30) 
          return 0; 
   
@@ -12,16 +12,16 @@
      { 
          char s = username.at(i); 
   
-         //no spaces allowed 
+         
          if (s == ' ') 
              return 0; 
   
-         //characters other than alphabets and numbers 
+         
          if (isalnum(s)) 
              continue; 
          else 
          { 
-             //periods and underscore allowed but only one 
+            
              if (s == '_' || s == '.') 
              { 
                  special++; 
